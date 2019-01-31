@@ -20,7 +20,7 @@ In section X the data is manually seperated into a male and female training, val
 The data is stored in a list of dictionaries (called updated_training_list), every dictionary being a tweet that has the 4 extracted elements as keys and the corresponding values. 
 
 ### Processing the data
-To analyze the text written in the tweets we used spaCy to tokenize and perform part-of-speech tagging as can be seen in section X. We chose not the lemmatize the text as the tweets are extremely short. By lemmatizing we could lose relevant information by making the tweets even shorter than they already are. By leaving the tweets as they are, we could focus on lexical variation more. We specifically looked at first person expressions such as 'I'm' and 'I am'. The lemma for 'I'm' and 'I am' is 'be', therefore lemmatizing these expressions would condense the lexical variation. 
+To analyze the text written in the tweets we used spaCy to tokenize and perform part-of-speech tagging as can be seen in section X. For this step you will need to download and import spacy) We chose not the lemmatize the text as the tweets are extremely short. By lemmatizing we could lose relevant information by making the tweets even shorter than they already are. By leaving the tweets as they are, we could focus on lexical variation more. We specifically looked at first person expressions such as 'I'm' and 'I am'. The lemma for 'I'm' and 'I am' is 'be', therefore lemmatizing these expressions would condense the lexical variation. 
 
 ### Finding relevant features
 Section X contains functions for finding the relevant features in our tweets. All the functions have a comment and a docstring defining what the function does. The features we're looking at can be divided into the following categories: 
@@ -29,7 +29,13 @@ Section X contains functions for finding the relevant features in our tweets. Al
 * Linguistic features
 * Sentiment features
 
-The first couple of functions look at features such as punctuation (e.g. exclamation marks, commas and use of symbols). The next functions look at extra-linguistic features such as symbols that have a specific function on Twitter (e.g. '#' and '@'). Functions after that look at linguistic features, that analyse the text on a deeper level. These functions require tokenization and pos-tagging, so as to count the number of verbs and nouns. Finally, the last functions look at sentiment in the tweets. For this we used the VADER sentiment intesity analyzer. This shows the positive, negative and neutral sentiment of a tweet. 
+The first couple of functions look at features such as punctuation (e.g. exclamation marks, commas and use of symbols). The next functions look at extra-linguistic features such as symbols that have a specific function on Twitter (e.g. '#' and '@'). Functions after that look at linguistic features, that analyse the text on a deeper level. These functions require tokenization and pos-tagging, so as to count the number of verbs and nouns. Finally, the last functions look at sentiment in the tweets. For this we used the VADER sentiment intesity analyzer. This shows the positive, negative and neutral sentiment of a tweet. For this last step you need to import nltk and the vader lexicon:
+
+import nltk
+nltk.downloader.download('vader_lexicon')
+from spacy.tokens import Doc
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 We calculated differences between male and female, which can be found in the visualization python file. 
 
 ### Finding the relevant features in the training set
