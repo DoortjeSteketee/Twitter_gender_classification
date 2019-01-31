@@ -26,4 +26,5 @@ Section X contains functions for finding the relevant features in our tweets. Al
 * Extra-linguistic features
 * Linguistic features
 * Sentiment features
+
 The first couple of functions look at features such as punctuation (e.g. exclamation marks, commas and use of symbols). The next functions look at extra-linguistic features such as symbols that have a specific function on Twitter (e.g. '#' and '@'). Functions after that look at linguistic features, that analyse the text on a deeper level. These functions require tokenization and pos-tagging, so as to count the number of verbs and nouns. Finally, the last functions look at sentiment in the tweets. For this we used the VADER sentiment intesity analyzer. This shows the positive, negative and neutral sentiment of a tweet. 
