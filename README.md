@@ -25,7 +25,7 @@ In section X the data is manually seperated into a male and female training, val
 * retweet count
 * tweet text 
 
-The data is stored in a list of dictionaries (called updated_training_list - can be found in the data folder), every dictionary being a tweet that has the 4 extracted elements as keys and the corresponding values. 
+This can be found in the processing_data.py script. The data is stored in a list of dictionaries (called updated_training_list - can be found in the data folder), every dictionary being a tweet that has the 4 extracted elements as keys and the corresponding values. 
 
 ### Processing the data
 To analyze the text written in the tweets we used spaCy to tokenize and perform part-of-speech tagging as can be seen in section X. For this step you will need to download and import spacy):
