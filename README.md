@@ -6,8 +6,13 @@ Classification of tweets based on gender
 ### Table of contents
 * [General info](#general-info)
 * [Explanation of the dataset](#Our-dataset)
+* [Splitting the data](#Splitting-the-data)
+* [Processing the data](#Processing-the-data)
+* [Finding relevant features](#Finding-relevant-features)
+* [Implementation on the training set](#Implementation-on-the-training-set)
+* [Building the classifier](#Building-the-classifier)
 
-#### General info
+### General info
 The different usage of language by men and women is a widely discussed topic. Men and women have been found to use different forms of communication (Bamman, Eisenstein & Schnoebelen, 2012). Women have been found to prefer standard or "prestige" forms of language whereas men like to seem more "tough" or establish their local identity (Trudgill, 1972). Twitter is a communication platform where language use is restricted by the limited amount of characters that can go in a tweet (namely 140). With this classification project we want to see if the different language usage patterns of men and women can also be found in tweets. 
 
 ### Our dataset
@@ -49,10 +54,10 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
 We calculated differences between male and female, which can be found in the visualization python file. 
 
-### Finding the relevant features in the training set
+### Implementation on the training set
 All the information from the relevant features needs to be stored in a csv-file which can be seen in section X. From the updated_training_list we can extract the text for the corresponding tweet and perform every function seperately. 
 
-### Building a classifier
+### Building the classifier
 From the csv-file built in section X, we can calculate the total number of found features seperately for male and female. However, because the total amount of tweets is different for male and female, we need to calculate the average amount of found features (relative to the total amount of tweets). So the steps for every function are the following: 
 * Count total amount of tweets (using a counter)
 * Count number of features for male and female seperately (with the correct function for that feature) (also using a counter)
