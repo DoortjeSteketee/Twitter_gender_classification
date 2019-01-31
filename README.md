@@ -20,7 +20,7 @@ In section X the data is manually seperated into a male and female training, val
 The data is stored in a list of dictionaries (called updated_training_list), every dictionary being a tweet that has the 4 extracted elements as keys and the corresponding values. 
 
 ### Processing the data
-To analyze the text written in the tweets we used spaCy to tokize and perform part-of-speech tagging as can be seen in section X. We chose not the lemmatize the text as the tweets are extremely short. By lemmatizing we could lose relevant information by making the tweets even shorter than they already are. By leaving the tweets as they are, we could focus on lexical variation more. We specifically looked at first person expressions such as 'I'm' and 'I am'. The lemma for 'I'm' and 'I am' is 'be', therefore lemmatizing these expressions would condense the lexical variation. 
+To analyze the text written in the tweets we used spaCy to tokenize and perform part-of-speech tagging as can be seen in section X. We chose not the lemmatize the text as the tweets are extremely short. By lemmatizing we could lose relevant information by making the tweets even shorter than they already are. By leaving the tweets as they are, we could focus on lexical variation more. We specifically looked at first person expressions such as 'I'm' and 'I am'. The lemma for 'I'm' and 'I am' is 'be', therefore lemmatizing these expressions would condense the lexical variation. 
 
 ### Finding relevant features
 Section X contains functions for finding the relevant features in our tweets. All the functions have a comment and a docstring defining what the function does. The features we're looking at can be divided into the following categories: 
@@ -38,7 +38,7 @@ All the information from the relevant features needs to be stored in a csv-file 
 From the csv-file built in section X, we can calculate the total number of found features seperately for male and female. However, because the total amount of tweets is different for male and female, we need to calculate the average amount of found features (relative to the total amount of tweets). So the steps for every function are the following: 
 * Count total amount of tweets (using a counter)
 * Count number of features for male and female seperately (with the correct function for that feature) (also using a counter)
-* Divide number of found features by total amount of tweets - this gives the average amount of found features. 
+* Divide number of found features by total amount of tweets - this gives the average amount of found features for male and female. 
 
 These average amount of found features is essential for building the classifier, as it is the gold label for the tweet. 
 The classifier will look at a tweet of which the gender is unknown, count the number of specific features and compare it to this gold label. The classifier will then predict the gender based on the gold label. 
