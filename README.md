@@ -17,7 +17,7 @@ In section X the data is manually seperated into a male and female training, val
 * retweet count
 * tweet text 
 
-The data is stored in a list of dictionaries, every dictionary being a tweet that has the 4 extracted elements as keys and the corresponding values. 
+The data is stored in a list of dictionaries (called updated_training_list), every dictionary being a tweet that has the 4 extracted elements as keys and the corresponding values. 
 
 ### Processing the data
 To analyze the text written in the tweets we used spaCy to tokize and perform part-of-speech tagging as can be seen in section X. We chose not the lemmatize the text as the tweets are extremely short. By lemmatizing we could lose relevant information by making the tweets even shorter than they already are. By leaving the tweets as they are, we could focus on lexical variation more. We specifically looked at first person expressions such as 'I'm' and 'I am'. The lemma for 'I'm' and 'I am' is 'be', therefore lemmatizing these expressions would condense the lexical variation. 
@@ -32,4 +32,15 @@ Section X contains functions for finding the relevant features in our tweets. Al
 The first couple of functions look at features such as punctuation (e.g. exclamation marks, commas and use of symbols). The next functions look at extra-linguistic features such as symbols that have a specific function on Twitter (e.g. '#' and '@'). Functions after that look at linguistic features, that analyse the text on a deeper level. These functions require tokenization and pos-tagging, so as to count the number of verbs and nouns. Finally, the last functions look at sentiment in the tweets. For this we used the VADER sentiment intesity analyzer. This shows the positive, negative and neutral sentiment of a tweet. 
 
 ### Finding the relevant features in the training set
-All the information from the relevant features needs to be stored in a csv-file which can be seen in section X. From the 
+All the information from the relevant features needs to be stored in a csv-file which can be seen in section X. From the updated_training_list we can extract the text for the corresponding tweet and perform every function seperately. 
+
+### Building a classifier
+From the csv-file built in section X, we can calculate the total number of found features seperately for male and female. However, because the total amount of tweets is different for male and female, we need to calculate the average amount of found features (relative to the total amount of tweets). So the steps for every function are the following: 
+* Count total amount of tweets (using a counter)
+* Count number of features for male and female seperately (with the correct function for that feature) (also using a counter)
+* Divide number of found features by total amount of tweets - this gives the average amount of found features. 
+
+These average amount of found features is essential for building the classifier, as it is the gold label for the tweet. 
+The classifier will look at a tweet of which the gender is unknown, count the number of specific features and compare it to this gold label. The classifier will then predict the gender based on the gold label. 
+For example, if the average amount of exclamation marks used by males is 1 and females is 3. If the classifier then sees a tweet that contains 3 exclamation marks, it will predict the tweet to be written by a female. 
+
