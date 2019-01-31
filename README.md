@@ -12,7 +12,7 @@ Our dataset exists of 20.000 tweets, characterized by gender: male/female/brand/
 
 ### Splitting the data
 In section X the data is manually seperated into a male and female training, validation and test set. The male and female sets are then combined to form the full training, validation and test set. From all the information (e.g. user ID, retweet count, profile description, text), only some information is relevant for the classification. We extracted:
-*gender 
+* gender 
 * date/time created
 * retweet count
 * tweet text 
