@@ -1,6 +1,6 @@
 ##Storing the training data as csv
 
-outfilename = "training_set.csv"
+outfilename = "training_set_features.csv"
 with open(outfilename, "w") as outfile:
     fieldnames = ['gender', 'created', 'retweet_count', 'text', 'num_exclamation', 'num_tokens', 'num_replys', 'contains_link', 'num_verbs', 'num_nouns', 'neg_score', 'pos_score', 'neu_score', 'num_commas', 'num_period', 'num_question_mark', 'num_upper', 'num_lower', 'num_num', 'contains_smiley', 'num_likes', 'num_first_person', 'num_hashtags', 'num_symbols']
     writer = csv.DictWriter(outfile, fieldnames = fieldnames)
@@ -30,6 +30,6 @@ with open(outfilename, "w") as outfile:
 
 ##Opening the training data
         
-with open("training_set.csv") as csvfile2:
+with open("training_set_features.csv") as csvfile2:
     tweet_reader_2 = csv.DictReader(csvfile2, delimiter=',', quotechar='"')
     tweet_dicts_2 = [dict(d) for d in tweet_reader_2]
