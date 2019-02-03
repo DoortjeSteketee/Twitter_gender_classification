@@ -12,6 +12,7 @@ Classification of tweets based on gender
 * [Finding relevant features](#Finding-relevant-features)
 * [Implementation on the training set](#Implementation-on-the-training-set)
 * [Building the classifier](#Building-the-classifier)
+* [Calculating the accuracy](#Calculating-the-accuracy)
 
 ### General info
 The different usage of language by men and women is a widely discussed topic. Men and women have been found to use different forms of communication (Bamman, Eisenstein & Schnoebelen, 2012). Women have been found to prefer standard or "prestige" forms of language whereas men like to seem more "tough" or establish their local identity (Trudgill, 1972). Twitter is a communication platform where language use is restricted by the limited amount of characters that can go in a tweet (namely 140). With this classification project we want to see if the different language usage patterns of men and women can also be found in tweets. 
