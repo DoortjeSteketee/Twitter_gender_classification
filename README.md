@@ -61,7 +61,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 We calculated differences between male and female, which can be found in the visualization python file. 
 
 ### Implementation on the training set
-All the information from the relevant features needs to be stored in a csv-file which can be seen in script 6 (storing_and_opening_training_data.py). From the updated_training_list we can extract the text for the corresponding tweet and perform every function seperately. 
+All the information from the relevant features needs to be stored in a csv-file which can be seen in script 7 (storing_and_opening_training_data.py). From the updated_training_list we can extract the text for the corresponding tweet and perform every function seperately. 
 
 ### Building the classifier
 From the csv-file built in script 7, we can calculate the total number of found features seperately for male and female. However, because the total amount of tweets is different for male and female, we need to calculate the average amount of found features (relative to the total amount of tweets). So the steps for every function are the following: 
