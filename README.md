@@ -1,6 +1,7 @@
 # Twitter user gender classification
 Classification of tweets based on gender
 ### Lisa Markslag and Doortje Steketee
+### l.markslag@student.vu.nl / d.steketee@student.vu.nl
 #### 3rd of February 2019
 
 ### Table of contents
