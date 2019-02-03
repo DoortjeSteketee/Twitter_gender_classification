@@ -6,6 +6,7 @@
 
 updated_training_list = []
 updated_validation_list = []
+updated_test_list = []
 
 for dictionary in training_list:
     dict_tweets = {}
@@ -13,10 +14,17 @@ for dictionary in training_list:
         if column_name in ['gender', 'text', 'retweet_count', 'created']:
             dict_tweets[column_name] = value
     updated_training_list.append(dict_tweets)
-
+    
 for dictionary in validation_list:
     validation_tweet_dicts = {}
     for column_name, value in dictionary.items():
         if column_name in ['gender', 'text', 'retweet_count', 'created']:
             validation_tweet_dicts[column_name] = value
     updated_validation_list.append(validation_tweet_dicts)
+    
+for dictionary in test_list:
+    test_tweet_dicts = {}
+    for column_name, value in dictionary.items():
+        if column_name in ['gender', 'text', 'retweet_count', 'created']:
+            test_tweet_dicts[column_name] = value
+    updated_test_list.append(test_tweet_dicts)
