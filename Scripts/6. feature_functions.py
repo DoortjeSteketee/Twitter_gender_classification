@@ -63,6 +63,12 @@ def count_reply_tweet(text_tweet):
     return(count_reply)
 #count_reply_tweet = 1
 
+def num_hashtags(text_tweet):
+    """Counting the number of hashtags in a tweet"""
+    num_hashtags = text_tweet.count('#')
+    return(num_hashtags)
+#num_hashtags = 4
+
 def contains_links(text_tweet):
     """Determining if a tweet contains a link"""
     if "https:" in text_tweet:
